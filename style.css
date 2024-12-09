@@ -138,7 +138,7 @@ button:nth-child(2):hover{
     width:38rem;
 }
 .circle:nth-child(2){
-    background-image: url("image.jpg/html8.jpg");
+    background-image: url("html8.jpg");
     width:30rem;
     background-size: cover;
     background-size:100%;
