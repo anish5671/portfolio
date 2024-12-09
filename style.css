@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.protfolio-container{
+    min-height: 100vh;
+    width:100%;
+    display:flex;/*kuki color container joki left right tha wo vertically divide tha usko horizontally krne k liy*/
+
+
+}
+.navlist{
+    display: flex;
+    gap:3.5rem;/*provide gap between navbars*/
+
+    height: 15vh;
+    width:100%;
+    justify-content: center;/*horizontaly center krne ke liye navlist ko*/
+    align-items: center;/*vertically center krne ke liye*/
+    position: fixed;/*bg container blue black ko pura background me laane ke liye*/
+
+
+}
+.navlist li{
+    list-style: none;/*to remove bullets from list and underline list se remove nhi honge*/
+
+
+}
+.navlist li a{
+    text-decoration: none;/*to remove underline from navbar*/
+    text-transform: uppercase;
+    font-size: 1rem;
+    color:#fff;
+    position: relative;
+
+}
+.left-container, .right-container{
+    height:100vh;
+    display:flex;
+    align-items: center;/*isko use krne ke liy display flex krna jruri hai our align item center se ye sent upper chipka tha wo bich me aajta hai*/
+
+}
+.left-container{
+    background-color: #262525;/*dark grey*/
+    width:70%;
+    padding-left: 3rem;
+    
+
+}
+.right-container{
+    background:linear-gradient(-45deg,#3877ff, #262525);/*without direction dene pr gradient niche jata h usko upr bhejne ke liy direction denge*/
+    width:30%;
+
+}
+.icons .fa-brands{
+    color:#bbb;
+    font-size: 1.7rem;;
+}
+.icons{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:2rem/*provide gap between icons*/
+
+
+}
+.content{
+    margin-left: 4rem;/*provide space between sentence and icons*/
+
+    
+}
+.content .intro{
+    font-size: 1.5rem;
+    color:#fff;
+}
+.content .intro span{
+    color:#5DB9EE
+}
+.content h1{
+    font-size: 4rem;
+    color:#5DB9EE;
+}
+.content .detail{
+    font-size:1.2rem;
+    color:#fff;
+    max-width:38rem;/*sent ka width limited rheg*/
+    margin:1.1rem  0 3 rem 0;
+    line-height: 1.8rem;
+
+}
+.btn-container button{
+
+    border:.1rem solid #5DB9EE;
+    padding:.8rem 1.5rem;
+    border-radius: .5rem;
+    cursor:pointer;
+    transition: .5s;
+    margin:2 0rem;
+}
+button:nth-child(1){
+    background-color: #5DB9EE;
+    color:#262525;
+}
+button:nth-child(2){
+    background-color: transparent;
+    color:#5DB9EE;
+    margin-left:2rem;
+}
+button:nth-child(1):hover{
+   background: transparent;
+    color: #5DB9EE;
+}
+button:nth-child(2):hover{
+    background: #5DB9EE;
+    color:#262525;
+}
+.icons .fa-brands:hover{
+    cursor:pointer;
+    background: linear-gradient(#fff,#3877ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;/*upper ka dono function icons ka colour bdlne ke liy hi*/
+
+
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;/*for perfect circle*/
+    top:50%;
+    left:70%;
+    transform:translate(-50%,-50%);/*upper ka teeno with presence of absolute postion use knre pr koi v chiz center hojaega*/
+
+}
+.circle:nth-child(1){
+    background:linear-gradient(90deg,transparent 50%,#262525 50%);
+    width:38rem;
+}
+.circle:nth-child(2){
+    background-image: url("image.jpg/html8.jpg");
+    width:30rem;
+    background-size: cover;
+    background-size:100%;
+    background-repeat: no-repeat;
+    border:.1rem solid #fff;/*white thin border ke liye*/
+    box-shadow:
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,/* xaxis=0 yaxis=0 spread=0*/
+    0 0 2rem #3877ff,
+    inset 0 0 2rem #3877ff,
+    0 0 4rem #3877ff
+    ,inset 0 0 4rem #3877ff;/*for shadow on the border of pic*/
+
+} 
+.navlist li a::after{
+    content:"";
+    position: absolute;
+    background: #fff;
+    width:100%;
+    height:.1rem;
+    left :0;
+    bottom:-5px;
+    transform: scalex(0);
+    transform-origin: bottom right ;
+    transition: transform .5s;
+
+}
+.navlist li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.Assignment{
+    color:#fff;
+}
+h2{
+    color:#5DB9EE;
+}
